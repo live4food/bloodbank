@@ -19,7 +19,7 @@ public class Blood {
 		validBlood.add("O-");
 	}
 	
-	public HashMap<String,request_p> request_M=new HashMap<>();
+	public HashMap<String,patientRequest> request_M=new HashMap<>();
 	 
 	public HashMap<String,Integer> blood = new HashMap<>();
 	

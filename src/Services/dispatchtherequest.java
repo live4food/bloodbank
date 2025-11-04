@@ -5,8 +5,7 @@ import java.util.List;
 import Menu.*;
 
 public class dispatchtherequest {
-	public void dispatch(List<String> validBlood,HashMap<String,Integer> blood,HashMap<String,request_p> request_M) {
-		System.out.println(request_M+"/n"+validBlood+"/n"+blood);
+	public void dispatch(List<String> validBlood,HashMap<String,Integer> blood,HashMap<String,patientRequest> request_M) {
 		for(String id:request_M.keySet()) {
 			if(blood.containsKey(request_M.get(id).bloodtpy)) {
 				if(request_M.get(id).quantity<=blood.get(request_M.get(id).bloodtpy)) {
