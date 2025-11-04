@@ -56,9 +56,6 @@ public class menu {
 								if(value.equals("Y")) {
 									dispachobj.dispatch(bloodObject.validBlood,bloodObject.blood,req.getdet());
 								}
-								else {
-									System.out.println("Invalid blood type...");
-								}
 								break;
 				}
 			}

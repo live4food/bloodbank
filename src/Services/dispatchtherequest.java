@@ -5,13 +5,10 @@ import java.util.List;
 import Menu.*;
 
 public class dispatchtherequest {
-	//request_p obj=new request_p(null, null, 0);
 	public void dispatch(List<String> validBlood,HashMap<String,Integer> blood,HashMap<String,request_p> request_M) {
 		System.out.println(request_M+"/n"+validBlood+"/n"+blood);
 		for(String id:request_M.keySet()) {
 			if(blood.containsKey(request_M.get(id).bloodtpy)) {
-				//System.out.println(request_M.get(id).quantity);
-				//System.out.println(blood.get(request_M.get(id).bloodtpy));
 				if(request_M.get(id).quantity<=blood.get(request_M.get(id).bloodtpy)) {
 					int a;
 					a=blood.get(request_M.get(id).bloodtpy);
