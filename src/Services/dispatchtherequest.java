@@ -7,24 +7,26 @@ import Menu.*;
 public class dispatchtherequest {
 	//request_p obj=new request_p(null, null, 0);
 	public void dispatch(List<String> validBlood,HashMap<String,Integer> blood,HashMap<String,request_p> request_M) {
-		System.out.println("Not avilable now...");
+		System.out.println(request_M+"/n"+validBlood+"/n"+blood);
 		for(String id:request_M.keySet()) {
-     	if(validBlood.contains(request_M.get(id).bloodtpy)) {
-			System.out.println(blood.get(id).toString()+" "+request_M.get(id).quantity);
-			if(blood.containsKey(request_M.get(id).bloodtpy) ) {
-				
-				if(blood.get(id) >= request_M.get(id).quantity) {
+			if(blood.containsKey(request_M.get(id).bloodtpy)) {
+				//System.out.println(request_M.get(id).quantity);
+				//System.out.println(blood.get(request_M.get(id).bloodtpy));
+				if(request_M.get(id).quantity<=blood.get(request_M.get(id).bloodtpy)) {
+					int a;
+					a=blood.get(request_M.get(id).bloodtpy);
+					a-=(int)(request_M.get(id).quantity);
+					blood.put(request_M.get(id).bloodtpy, a);
 					request_M.remove(id);
-					blood.put(id, blood.get(id)-request_M.get(id).quantity);
-					System.out.println("dispatched ");
+					System.out.println("Blood successfully dispatched");
 				}
 				else {
-					System.out.println("low Quantity");
+					System.out.println("Not enough blood");
 				}
 			}
 			else {
-				System.out.println("Not avilable now...");
+				System.out.println("Blood is not available");
 			}
-			
+     	}
+	}
 }
-		}}}

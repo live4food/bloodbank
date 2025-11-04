@@ -54,7 +54,7 @@ public class menu {
 								System.out.println("want to dispatch all (Y/N)");
 								String value=sc.next();
 								if(value.equals("Y")) {
-									dispachobj.dispatch(bloodObject.validBlood,bloodObject.blood,bloodObject.request_M);
+									dispachobj.dispatch(bloodObject.validBlood,bloodObject.blood,req.getdet());
 								}
 								else {
 									System.out.println("Invalid blood type...");

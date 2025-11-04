@@ -1,4 +1,6 @@
 package Services;
+import java.util.HashMap;
+
 import Menu.*;
 
 public class request {
@@ -9,5 +11,8 @@ public class request {
 	public void display() {
 		// TODO Auto-generated method stub
 		bloodObject.display();
+	}
+	public HashMap<String,request_p> getdet() {
+		return bloodObject.request_M;
 	}
 }
