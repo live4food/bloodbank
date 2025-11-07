@@ -3,7 +3,7 @@ import Menu.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class add_records {
+public class AddBloodRecords {
 	public void add(String blood_group,int units,HashMap<String,Integer> map) {
 		 ArrayList<String> validBloodTypes = new ArrayList<>();
 	     validBloodTypes.add("A+");

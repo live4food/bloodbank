@@ -3,7 +3,7 @@ import java.util.HashMap;
 
 import Menu.*;
 
-public class remove {
+public class RemoveBloodRecord {
 
 	public void removeBlood(String name, int Remquan,HashMap<String,Integer> blood) {
 	       if (blood.containsKey(name)) {

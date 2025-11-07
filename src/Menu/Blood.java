@@ -3,31 +3,30 @@ package Menu;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.Scanner;
 
 public class Blood {
 	Scanner sc=new Scanner(System.in);
 	 public Blood(){
-		validBlood.add("A+");
-		validBlood.add("A-");
-		validBlood.add("B+");
-		validBlood.add("B-");
-		validBlood.add("AB+");
-		validBlood.add("AB-");
-		validBlood.add("O+");
-		validBlood.add("O-");
+		validBloodList.add("A+");
+		validBloodList.add("A-");
+		validBloodList.add("B+");
+		validBloodList.add("B-");
+		validBloodList.add("AB+");
+		validBloodList.add("AB-");
+		validBloodList.add("O+");
+		validBloodList.add("O-");
 	}
 	
-	public HashMap<String,patientRequest> request_M=new HashMap<>();
+	public HashMap<String, PatientRequest> patientRequestHashMap =new HashMap<>();
 	 
-	public HashMap<String,Integer> blood = new HashMap<>();
+	public HashMap<String,Integer> bloodHashMap = new HashMap<>();
 	
-	public List<String> validBlood= new ArrayList<String>();
+	public List<String> validBloodList = new ArrayList<String>();
 	
 	public void display() {
-		for(String id:request_M.keySet()) {
-			System.out.println(request_M.get(id));
+		for(String id: patientRequestHashMap.keySet()) {
+			System.out.println(patientRequestHashMap.get(id));
 		}
 		
 			

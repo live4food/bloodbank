@@ -5,7 +5,7 @@ import java.util.List;
 
 import Menu.*;
 
-public class avilablity {
+public class Availablity {
 
 	public void availability(List<String> validBlood,String bloodType,HashMap<String,Integer> bloodAvailable) {
         if(!validBlood.contains(bloodType)) {
